@@ -35,9 +35,17 @@ contents = CSV.open(
 contents.each do |row|
   name = row[:first_name]
   phone = clean_phones(row[:homephone])
-  time = (row[:regdate]).split(' ')[1].to_s.split(':')
-  @hour = time[0].to_i
-  time_count
-  puts "#{phone}   #{@hour}   #{name}"
+  # time = (row[:regdate])
+  # dat = (row[:regdate].split())
+  # one = dat[0].split("/")
+  # dato = time.strftime("%d/%m/%Y")
+  # one[2] = "20" + one[2]
+  # one = one.join("/")
+  # dato = one += " #{dat[1]}"
+  # p time = Time.new(dato).strftime("%m/%d/%Y %H:%M")
+  # @hour = time[0].to_i
+  # time_count
+  # #{@hour}
+  puts "#{phone}   #{name}"
 end
 puts "The hour with the most registrations is: #{@arr.each_with_index.max[1]}:00"
